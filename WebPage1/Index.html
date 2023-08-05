@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Recruitment Solution</title>
+  <style>
+    /* CSS styles for the web page */
+    /* Add your custom styles here */
+
+    /* Example styles for demonstration purposes */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: beige;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: antiquewhite;
+    }
+
+    .search-form {
+      margin-bottom: 20px;
+    }
+
+    .candidate-list {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .candidate-list li {
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      padding: 10px;
+    }
+
+    /* CSS animation */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .fade-in {
+      animation: fadeIn 1s;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Online Recruitment Solution</h1>
+    <p>Efficient hiring for HR professionals</p>
+  </header>
+
+  <div class="container">
+    <h2><u>Welcome to our recruitment solution</u></h2>
+
+    <!-- Login form -->
+    <form id="login-form">
+      <h3><u>Login</u></h3>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password">
+      <button type="submit">Login</button>
+    </form>
+
+    <!-- Register form -->
+    <form id="register-form">
+      <h3><u>Register</u></h3>
+      <label for="company-name">Company Name:</label>
+      <input type="text" id="company-name" name="company-name">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password">
+      <button type="submit">Register</button>
+    </form>
+
+    <!-- Candidate search form -->
+    <form id="search-form" class="search-form">
+      <h3><u>Candidate Search</u></h3>
+      <label for="location">Location:</label>
+      <input type="text" id="location" name="location">
+      <label for="job-role">Job Role:</label>
+      <input type="text" id="job-role" name="job-role">
+      <button type="submit">Search</button>
+    </form>
+
+    <!-- Candidate list -->
+    <ul id="candidate-list" class="candidate-list">
+      <!-- Fetched candidates will be dynamicallygenerated here -->
+    </ul>
+  </div>
+
+  <script>
+    // JavaScript code for the web page
+    // Add your custom JavaScript here
+
+    // Example code for demonstration purposes
+    document.getElementById('login-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      // Perform login logic here
+    });
+
+    document.getElementById('register-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      // Perform registration logic here
+    });
+
+    document.getElementById('search-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      // Perform candidate search logic here
+      // Fetch candidates based on location and job role
+      // Append the fetched candidates to the candidate list
+      var candidateList = document.getElementById('candidate-list');
+      var candidateItem = document.createElement('li');
+      candidateItem.textContent = 'Candidate Name';
+      candidateItem.classList.add('fade-in');
+      candidateList.appendChild(candidateItem);
+    });
+  </script>
+</body>
+</html>
